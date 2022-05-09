@@ -378,13 +378,13 @@ initPage.createWrapper();
 const keyboardBlock = document.querySelector('.keyboard');
 
 function bildKeyboard(lang) {
-  for (let i = 0; i < 5; i + 1) {
+  for (let i = 0; i < 5; i += 1) {
     const line = document.createElement('div');
     line.classList.add('line');
     line.classList.add(`line-${i}`);
     line.setAttribute('data-lng', `${lang[0].lng}`);
     keyboardBlock.append(line);
-    for (let y = 0; y < lang.length; y + 1) {
+    for (let y = 0; y < lang.length; y += 1) {
       if (lang[y].line === i) {
         const key = document.createElement('div');
         key.classList.add('key');
