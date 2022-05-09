@@ -367,7 +367,7 @@ class InitPage {
   createFooter() {
     this.footer = document.createElement('div');
     this.footer.classList.add('footer');
-    this.footer.innerHTML = '<div class=\'footer__wrapper\'><p class=\'year\'>2022</p><a class=\'link\' href=\'https://github.com/SergBily\'><img src="/virtual-keyboard/assets/images/github-logo.png" alt="github-logo"></a></div>';
+    this.footer.innerHTML = '<div class=\'footer__wrapper\'><p class=\'year\'>2022</p><a class=\'link\' href=\'https://github.com/SergBily/virtual-keyboard/pull/3\'><img src="/virtual-keyboard/assets/images/github-logo.png" alt="github-logo"></a></div>';
     this.wrapper.append(this.footer);
   }
 }
