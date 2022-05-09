@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Libre Bodoni";
+  src: url("/virtual-keyboard/assets/fonts/Libre-Bodoni-Regular.woff2") format("woff2"), url("/virtual-keyboard/assets/fonts/Libre-Bodoni-Regular.woff") format("woff"), url("/virtual-keyboard/assets/fonts/Libre-Bodoni-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+*, h1 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  background-color: #d8d4d4;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  width: 750px;
+  height: auto;
+  margin: 10px auto 10px;
+}
+
+.title__text {
+  font-family: "Libre Bodoni";
+  font-size: 40px;
+  color: black;
+  line-height: 130%;
+  letter-spacing: 0.06;
+  text-align: center;
+}
+
+.textarea {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0 auto 10px;
+}
+
+.keyboard {
+  width: 750px;
+  height: 270px;
+  margin: 0 auto 10px;
+  padding: 10px 10px 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8.75px;
+  background-color: #c20f0f;
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
+}
+
+.infoBlock {
+  width: 750px;
+  height: 100px;
+  margin: 0 auto 10px;
+}
+
+.system, .changeLang {
+  font-family: "Libre Bodoni";
+  font-size: 24px;
+  color: black;
+  line-height: 110%;
+  letter-spacing: 0.06;
+  text-align: center;
+}
+
+.footer {
+  width: 750px;
+  height: auto;
+  margin: auto;
+}
+
+.footer__wrapper {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.year {
+  font-family: "Libre Bodoni";
+  font-size: 28px;
+  color: black;
+  line-height: 120%;
+  letter-spacing: 0.09;
+}
+
+.link {
+  width: 62px;
+  height: 62px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.line {
+  width: 100%;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.key {
+  width: 42px;
+  height: 100%;
+  font-family: "Libre Bodoni";
+  font-size: 20px;
+  color: white;
+  line-height: 110%;
+  letter-spacing: 0.06;
+  font-weight: 500;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.key.Backspace {
+  width: 106px;
+  height: 100%;
+}
+.key.Tab, .key.Delete {
+  width: 50px;
+}
+.key.CapsLock {
+  width: 104px;
+}
+.key.Enter {
+  width: 92px;
+}
+.key.ShiftLeft {
+  width: 94px;
+}
+.key.ShiftRight {
+  width: 102px;
+}
+.key.ControlLeft {
+  width: 74px;
+}
+.key.ControlRight {
+  width: 54px;
+}
+.key.Space {
+  width: 306px;
+}
+
+.Backspace,
+.Tab,
+.Delete,
+.CapsLock,
+.Enter,
+.ShiftLeft,
+.ShiftRight,
+.ControlLeft,
+.ControlRight,
+.MetaLeft,
+.AltLeft,
+.AltRight,
+.Space {
+  border: 2px solid white;
+}
+
+.ArrowLeft,
+.ArrowRight,
+.ArrowUp,
+.ArrowDown {
+  border: 3px dotted #fff;
+}
+
+.eng, .ru {
+  margin: auto;
+}
+
+.active {
+  background-color: white;
+  color: #000000;
+  transform: translate(-3px, 3px);
+  -webkit-transform: translate(-3px, 3px);
+  -moz-transform: translate(-3px, 3px);
+  -ms-transform: translate(-3px, 3px);
+  -o-transform: translate(-3px, 3px);
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+}
+
+.active-caps {
+  background-color: white;
+  color: #000000;
+}
