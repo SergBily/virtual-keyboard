@@ -1,3 +1,4 @@
+
 const body = document.querySelector('body');
 
 const eng = {
@@ -347,7 +348,7 @@ class InitPage {
   createTextArea() {
     this.textarea = document.createElement('div');
     this.textarea.classList.add('textarea');
-    this.textarea.innerHTML = '<textarea class=\'textarea__fild\' rows=\'10\' cols=\'91\' autofocus></textarea>';
+    this.textarea.innerHTML = '<textarea class=\'textarea__fild\' rows=\'8\' cols=\'70\' autofocus></textarea>';
     this.wrapper.append(this.textarea);
   }
 
@@ -462,6 +463,9 @@ class ControlKeyboard {
       this.tab();
     }
     if (this.event.type === 'keydown') {
+      if (this.event.key === 'Alt') {
+        event.preventDefault();
+      }
       this.outKey();
       this.pressKey();
       this.keyUp();
@@ -529,7 +533,7 @@ class ControlKeyboard {
   }
 
   keyUpHidden() {
-    if (this.event.code === 'CapsLock' || this.event.code.includes('Key')) return;
+    if (this.event.key !== 'Shift') return;
 
     this.letterUp.forEach((letter) => {
       const k = letter;
