@@ -70,8 +70,13 @@ body {
           flex-direction: column;
   row-gap: 8.75px;
   background-color: #c20f0f;
-  -webkit-box-shadow: 0 0 15px red;
-          box-shadow: 0 0 15px red;
+  -webkit-box-shadow: 5px 5px 15px red;
+          box-shadow: 5px 5px 15px red;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .infoBlock {
@@ -162,6 +167,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: black;
+  -webkit-box-shadow: 2px 1px 2px;
+          box-shadow: 2px 1px 2px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -227,13 +234,11 @@ body {
 .active {
   background-color: white;
   color: #000000;
-  transform: translate(-3px, 3px);
-  -webkit-transform: translate(-3px, 3px);
-  -moz-transform: translate(-3px, 3px);
-  -ms-transform: translate(-3px, 3px);
-  -o-transform: translate(-3px, 3px);
-  -webkit-box-shadow: 0 0 10px white;
-          box-shadow: 0 0 10px white;
+  transform: translate(3px, 2px);
+  -webkit-transform: translate(3px, 2px);
+  -moz-transform: translate(3px, 2px);
+  -ms-transform: translate(3px, 2px);
+  -o-transform: translate(3px, 2px);
 }
 
 .active-caps {
