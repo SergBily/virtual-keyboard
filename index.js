@@ -396,9 +396,9 @@ function bildKeyboard(lang) {
 
         const langCase = document.createElement('span');
         if (localStorage.getItem('language') === 'ru') {
-          langCase.classList.add('ru');
-        } else {
           langCase.classList.add('eng');
+        } else {
+          langCase.classList.add('ru');
         }
         key.append(langCase);
 
@@ -682,6 +682,11 @@ class MouseControl {
 
   space() {
     textArea.value = `${this.value.substring(0, this.start)} ${this.value.substring(this.start, this.value.lenght)}`;
+    textArea.selectionEnd = this.start + 1;
+  }
+
+  enter() {
+    textArea.value = `${this.value.substring(0, this.start)}\n${this.value.substring(this.start, this.value.lenght)}`;
     textArea.selectionEnd = this.start + 1;
   }
 }
