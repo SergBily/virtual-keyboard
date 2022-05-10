@@ -1,4 +1,3 @@
-
 const body = document.querySelector('body');
 
 const eng = {
@@ -477,7 +476,9 @@ class ControlKeyboard {
       this.unpressedKey();
       this.keyUpHidden();
     }
-    this.changeLanguage();
+    setTimeout(() => {
+      this.changeLanguage();
+    }, 100);
   }
 
   tab() {
@@ -550,11 +551,10 @@ class ControlKeyboard {
 
   changeLanguage() {
     const checkLang = document.querySelector('[data-lng]');
-
     if (this.event.type === 'keydown') {
       pressKeyBoth.add(this.event.code);
     } else {
-      pressKeyBoth.delete(this.event.code);
+      pressKeyBoth.clear();
     }
 
     if (pressKeyBoth.has('ControlLeft') && pressKeyBoth.has('AltLeft')) {
