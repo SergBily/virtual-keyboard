@@ -347,7 +347,7 @@ class InitPage {
   createTextArea() {
     this.textarea = document.createElement('div');
     this.textarea.classList.add('textarea');
-    this.textarea.innerHTML = '<textarea class=\'textarea__fild\' rows=\'10\' cols=\'91\' autofocus></textarea>';
+    this.textarea.innerHTML = '<textarea class=\'textarea__fild\' rows=\'8\' cols=\'70\' autofocus></textarea>';
     this.wrapper.append(this.textarea);
   }
 
@@ -396,9 +396,9 @@ function bildKeyboard(lang) {
 
         const langCase = document.createElement('span');
         if (localStorage.getItem('language') === 'ru') {
-          langCase.classList.add('ru');
-        } else {
           langCase.classList.add('eng');
+        } else {
+          langCase.classList.add('ru');
         }
         key.append(langCase);
 
@@ -462,6 +462,9 @@ class ControlKeyboard {
       this.tab();
     }
     if (this.event.type === 'keydown') {
+      if (this.event.key === 'Alt') {
+        event.preventDefault();
+      }
       this.outKey();
       this.pressKey();
       this.keyUp();
@@ -473,7 +476,9 @@ class ControlKeyboard {
       this.unpressedKey();
       this.keyUpHidden();
     }
-    this.changeLanguage();
+    setTimeout(() => {
+      this.changeLanguage();
+    }, 100);
   }
 
   tab() {
@@ -529,7 +534,7 @@ class ControlKeyboard {
   }
 
   keyUpHidden() {
-    if (this.event.code === 'CapsLock' || this.event.code.includes('Key')) return;
+    if (this.event.key !== 'Shift') return;
 
     this.letterUp.forEach((letter) => {
       const k = letter;
@@ -546,11 +551,10 @@ class ControlKeyboard {
 
   changeLanguage() {
     const checkLang = document.querySelector('[data-lng]');
-
     if (this.event.type === 'keydown') {
       pressKeyBoth.add(this.event.code);
     } else {
-      pressKeyBoth.delete(this.event.code);
+      pressKeyBoth.clear();
     }
 
     if (pressKeyBoth.has('ControlLeft') && pressKeyBoth.has('AltLeft')) {
@@ -678,6 +682,11 @@ class MouseControl {
 
   space() {
     textArea.value = `${this.value.substring(0, this.start)} ${this.value.substring(this.start, this.value.lenght)}`;
+    textArea.selectionEnd = this.start + 1;
+  }
+
+  enter() {
+    textArea.value = `${this.value.substring(0, this.start)}\n${this.value.substring(this.start, this.value.lenght)}`;
     textArea.selectionEnd = this.start + 1;
   }
 }
