@@ -1,3 +1,4 @@
+
 const body = document.querySelector('body');
 
 const eng = {
@@ -529,17 +530,23 @@ class ControlKeyboard {
     if (this.event.type === 'keydown') {
       if (this.event.key === 'Alt' || this.event.key === 'AltGraph') {
         event.preventDefault();
+      } else if (this.event.key === 'Shift' && capsLockStatus === true) {
+        this.keyUpHidden();
       } else if (this.event.code === 'CapsLock') {
         this.capsLock();
       } else if (this.event.code === 'Tab') {
+        event.preventDefault();
         this.tab();
       } else if (this.event.key === 'Shift') {
         this.keyUp();
       }
       this.outKey();
       this.pressKey();
+      this.outKeyShiftWithCaps();
     } else {
-      if (this.event.key === 'Shift') {
+      if (this.event.key === 'Shift' && capsLockStatus === true) {
+        this.keyUpWithCapsLock();
+      } else if (this.event.key === 'Shift') {
         this.keyUpHidden();
       } else if (document.querySelector('.CapsLock').classList.contains('active-caps') && ((this.event.code === 'ShiftRight' || this.event.code === 'ShiftLeft'))) {
         this.keyUp();
@@ -565,6 +572,16 @@ class ControlKeyboard {
     if ((document.querySelector('.CapsLock').classList.contains('active-caps') && this.element.classList.contains('capslock')) || this.event.shiftKey === true || shift === true) {
       this.upperCase();
     } else {
+      this.lowerCase();
+    }
+  }
+
+  outKeyShiftWithCaps() {
+    if (this.event.code === 'F12' || this.event.code === 'Escape') return;
+    if (!(this.element.classList.contains('shift'))) return;
+    this.event.preventDefault();
+
+    if (capsLockStatus === true && (this.event.shiftKey === true || shift === true)) {
       this.lowerCase();
     }
   }
@@ -609,7 +626,21 @@ class ControlKeyboard {
     });
   }
 
+  keyUpWithCapsLock() {
+    this.key = document.querySelectorAll('.capslock');
+
+    this.key.forEach((letter) => {
+      const down = letter.firstElementChild.firstElementChild;
+      down.hidden = true;
+      const up = letter.firstElementChild.lastElementChild;
+      up.hidden = false;
+    });
+  }
+
   keyUpHidden() {
+    this.letterUp = document.querySelectorAll('.letterUp');
+    this.letterDown = document.querySelectorAll('.letterDown');
+
     this.letterUp.forEach((letter) => {
       const k = letter;
       k.hidden = true;
@@ -712,12 +743,23 @@ class MouseControl {
         this.unpressedKey();
       }, 100);
     }
+
     if (event.type === 'mousedown' && (this.event.target.closest('.ShiftRight') || this.event.target.closest('.ShiftLeft'))) {
-      shift = true;
-      controlKeyboard.keyUp();
+      if (capsLockStatus === true) {
+        controlKeyboard.keyUpHidden();
+        shift = true;
+      } else {
+        shift = true;
+        controlKeyboard.keyUp();
+      }
     } else if (event.type === 'mouseup' && (this.event.target.closest('.ShiftRight') || this.event.target.closest('.ShiftLeft'))) {
-      shift = false;
-      controlKeyboard.keyUpHidden();
+      if (capsLockStatus === true) {
+        controlKeyboard.keyUpWithCapsLock();
+        shift = false;
+      } else {
+        shift = false;
+        controlKeyboard.keyUpHidden();
+      }
     } else if (event.type === 'click' && this.event.target.closest('.Shift')) {
       controlKeyboard.outKey();
     }
