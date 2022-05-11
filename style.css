@@ -204,6 +204,12 @@ body {
   width: 306px;
 }
 
+.key:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  color: #000000;
+}
+
 .Backspace,
 .Tab,
 .Delete,
@@ -232,13 +238,15 @@ body {
 }
 
 .active {
-  background-color: white;
+  -webkit-box-shadow: 0 0 15px #ffffff;
+          box-shadow: 0 0 15px #ffffff;
+  background-color: rgba(255, 255, 255, 0.7);
   color: #000000;
-  transform: translate(3px, 2px);
-  -webkit-transform: translate(3px, 2px);
-  -moz-transform: translate(3px, 2px);
-  -ms-transform: translate(3px, 2px);
-  -o-transform: translate(3px, 2px);
+  transform: scale(90%) translate(3px, 3px);
+  -webkit-transform: scale(90%) translate(3px, 3px);
+  -moz-transform: scale(90%) translate(3px, 3px);
+  -ms-transform: scale(90%) translate(3px, 3px);
+  -o-transform: scale(90%) translate(3px, 3px);
 }
 
 .active-caps {
