@@ -2,329 +2,398 @@ const body = document.querySelector('body');
 
 const eng = {
   0: {
-    lng: 'eng', keyDown: '`', code: 'Backquote', line: 0, keyUp: '~',
+    lng: 'eng', keyDown: '`', code: 'Backquote', line: 0, keyUp: '~', Shift: 'shift', caps: 'nocapslock',
   },
   1: {
-    keyDown: '1', code: 'Digit1', line: 0, keyUp: '!',
+    keyDown: '1', code: 'Digit1', line: 0, keyUp: '!', Shift: 'shift', caps: 'nocapslock',
   },
   2: {
-    keyDown: '2', code: 'Digit2', line: 0, keyUp: '@',
+    keyDown: '2', code: 'Digit2', line: 0, keyUp: '@', Shift: 'shift', caps: 'nocapslock',
   },
   3: {
-    keyDown: '3', code: 'Digit3', line: 0, keyUp: '#',
+    keyDown: '3', code: 'Digit3', line: 0, keyUp: '#', Shift: 'shift', caps: 'nocapslock',
   },
   4: {
-    keyDown: '4', code: 'Digit4', line: 0, keyUp: '$',
+    keyDown: '4', code: 'Digit4', line: 0, keyUp: '$', Shift: 'shift', caps: 'nocapslock',
   },
   5: {
-    keyDown: '5', code: 'Digit5', line: 0, keyUp: '%',
+    keyDown: '5', code: 'Digit5', line: 0, keyUp: '%', Shift: 'shift', caps: 'nocapslock',
   },
   6: {
-    keyDown: '6', code: 'Digit6', line: 0, keyUp: '^',
+    keyDown: '6', code: 'Digit6', line: 0, keyUp: '^', Shift: 'shift', caps: 'nocapslock',
   },
   7: {
-    keyDown: '7', code: 'Digit7', line: 0, keyUp: '&',
+    keyDown: '7', code: 'Digit7', line: 0, keyUp: '&', Shift: 'shift', caps: 'nocapslock',
   },
   8: {
-    keyDown: '8', code: 'Digit8', line: 0, keyUp: '*',
+    keyDown: '8', code: 'Digit8', line: 0, keyUp: '*', Shift: 'shift', caps: 'nocapslock',
   },
   9: {
-    keyDown: '9', code: 'Digit9', line: 0, keyUp: '(',
+    keyDown: '9', code: 'Digit9', line: 0, keyUp: '(', Shift: 'shift', caps: 'nocapslock',
   },
   10: {
-    keyDown: '0', code: 'Digit0', line: 0, keyUp: ')',
+    keyDown: '0', code: 'Digit0', line: 0, keyUp: ')', Shift: 'shift', caps: 'nocapslock',
   },
   11: {
-    keyDown: '-', code: 'Minus', line: 0, keyUp: '_',
+    keyDown: '-', code: 'Minus', line: 0, keyUp: '_', Shift: 'shift', caps: 'nocapslock',
   },
   12: {
-    keyDown: '=', code: 'Equal', line: 0, keyUp: '+',
+    keyDown: '=', code: 'Equal', line: 0, keyUp: '+', Shift: 'shift', caps: 'nocapslock',
   },
-  13: { keyDown: 'Backspace', code: 'Backspace', line: 0 },
-  14: { keyDown: 'Tab', code: 'Tab', line: 1 },
+  13: {
+    keyDown: 'Backspace', code: 'Backspace', line: 0, Shift: 'noshift', caps: 'nocapslock',
+  },
+  14: {
+    keyDown: 'Tab', code: 'Tab', line: 1, Shift: 'noshift', caps: 'nocapslock',
+  },
   15: {
-    keyDown: 'q', code: 'KeyQ', line: 1, keyUp: 'Q',
+    keyDown: 'q', code: 'KeyQ', line: 1, keyUp: 'Q', Shift: 'shift', caps: 'capslock',
   },
   16: {
-    keyDown: 'w', code: 'KeyW', line: 1, keyUp: 'W',
+    keyDown: 'w', code: 'KeyW', line: 1, keyUp: 'W', Shift: 'shift', caps: 'capslock',
   },
   17: {
-    keyDown: 'e', code: 'KeyE', line: 1, keyUp: 'E',
+    keyDown: 'e', code: 'KeyE', line: 1, keyUp: 'E', Shift: 'shift', caps: 'capslock',
   },
   18: {
-    keyDown: 'r', code: 'KeyR', line: 1, keyUp: 'R',
+    keyDown: 'r', code: 'KeyR', line: 1, keyUp: 'R', Shift: 'shift', caps: 'capslock',
   },
   19: {
-    keyDown: 't', code: 'KeyT', line: 1, keyUp: 'T',
+    keyDown: 't', code: 'KeyT', line: 1, keyUp: 'T', Shift: 'shift', caps: 'capslock',
   },
   20: {
-    keyDown: 'y', code: 'KeyY', line: 1, keyUp: 'Y',
+    keyDown: 'y', code: 'KeyY', line: 1, keyUp: 'Y', Shift: 'shift', caps: 'capslock',
   },
   21: {
-    keyDown: 'u', code: 'KeyU', line: 1, keyUp: 'U',
+    keyDown: 'u', code: 'KeyU', line: 1, keyUp: 'U', Shift: 'shift', caps: 'capslock',
   },
   22: {
-    keyDown: 'i', code: 'KeyI', line: 1, keyUp: 'I',
+    keyDown: 'i', code: 'KeyI', line: 1, keyUp: 'I', Shift: 'shift', caps: 'capslock',
   },
   23: {
-    keyDown: 'o', code: 'KeyO', line: 1, keyUp: 'O',
+    keyDown: 'o', code: 'KeyO', line: 1, keyUp: 'O', Shift: 'shift', caps: 'capslock',
   },
   24: {
-    keyDown: 'p', code: 'KeyP', line: 1, keyUp: 'P',
+    keyDown: 'p', code: 'KeyP', line: 1, keyUp: 'P', Shift: 'shift', caps: 'capslock',
   },
   25: {
-    keyDown: '[', code: 'BracketLeft', line: 1, keyUp: '{',
+    keyDown: '[', code: 'BracketLeft', line: 1, keyUp: '{', Shift: 'shift', caps: 'nocapslock',
   },
   26: {
-    keyDown: ']', code: 'BracketRight', line: 1, keyUp: '}',
+    keyDown: ']', code: 'BracketRight', line: 1, keyUp: '}', Shift: 'shift', caps: 'nocapslock',
   },
   27: {
-    keyDown: '\\', code: 'Backslash', line: 1, keyUp: '|',
+    keyDown: '\\', code: 'Backslash', line: 1, keyUp: '|', Shift: 'shift', caps: 'nocapslock',
   },
-  28: { keyDown: 'Del', code: 'Delete', line: 1 },
-  29: { keyDown: 'CapsLock', code: 'CapsLock', line: 2 },
+  28: {
+    keyDown: 'Del', code: 'Delete', line: 1, Shift: 'noshift', caps: 'nocapslock',
+  },
+  29: {
+    keyDown: 'CapsLock', code: 'CapsLock', line: 2, Shift: 'noshift', caps: 'nocapslock',
+  },
   30: {
-    keyDown: 'a', code: 'KeyA', line: 2, keyUp: 'A',
+    keyDown: 'a', code: 'KeyA', line: 2, keyUp: 'A', Shift: 'shift', caps: 'capslock',
   },
   31: {
-    keyDown: 's', code: 'KeyS', line: 2, keyUp: 'S',
+    keyDown: 's', code: 'KeyS', line: 2, keyUp: 'S', Shift: 'shift', caps: 'capslock',
   },
   32: {
-    keyDown: 'd', code: 'KeyD', line: 2, keyUp: 'D',
+    keyDown: 'd', code: 'KeyD', line: 2, keyUp: 'D', Shift: 'shift', caps: 'capslock',
   },
   33: {
-    keyDown: 'f', code: 'KeyF', line: 2, keyUp: 'F',
+    keyDown: 'f', code: 'KeyF', line: 2, keyUp: 'F', Shift: 'shift', caps: 'capslock',
   },
   34: {
-    keyDown: 'g', code: 'KeyG', line: 2, keyUp: 'G',
+    keyDown: 'g', code: 'KeyG', line: 2, keyUp: 'G', Shift: 'shift', caps: 'capslock',
   },
   35: {
-    keyDown: 'h', code: 'KeyH', line: 2, keyUp: 'H',
+    keyDown: 'h', code: 'KeyH', line: 2, keyUp: 'H', Shift: 'shift', caps: 'capslock',
   },
   36: {
-    keyDown: 'j', code: 'KeyJ', line: 2, keyUp: 'J',
+    keyDown: 'j', code: 'KeyJ', line: 2, keyUp: 'J', Shift: 'shift', caps: 'capslock',
   },
   37: {
-    keyDown: 'k', code: 'KeyK', line: 2, keyUp: 'K',
+    keyDown: 'k', code: 'KeyK', line: 2, keyUp: 'K', Shift: 'shift', caps: 'capslock',
   },
   38: {
-    keyDown: 'l', code: 'KeyL', line: 2, keyUp: 'L',
+    keyDown: 'l', code: 'KeyL', line: 2, keyUp: 'L', Shift: 'shift', caps: 'capslock',
   },
   39: {
-    keyDown: ';', code: 'Semicolon', line: 2, keyUp: ':',
+    keyDown: ';', code: 'Semicolon', line: 2, keyUp: ':', Shift: 'shift', caps: 'nocapslock',
   },
   40: {
-    keyDown: "'", code: 'Quote', line: 2, keyUp: '"',
+    keyDown: "'", code: 'Quote', line: 2, keyUp: '"', Shift: 'shift', caps: 'nocapslock',
   },
-  41: { keyDown: 'Enter', code: 'Enter', line: 2 },
-  42: { keyDown: 'Shift', code: 'ShiftLeft', line: 3 },
+  41: {
+    keyDown: 'Enter', code: 'Enter', line: 2, Shift: 'noshift', caps: 'nocapslock',
+  },
+  42: {
+    keyDown: 'Shift', code: 'ShiftLeft', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
   43: {
-    keyDown: 'z', code: 'KeyZ', line: 3, keyUp: 'Z',
+    keyDown: 'z', code: 'KeyZ', line: 3, keyUp: 'Z', Shift: 'shift', caps: 'capslock',
   },
   44: {
-    keyDown: 'x', code: 'KeyX', line: 3, keyUp: 'X',
+    keyDown: 'x', code: 'KeyX', line: 3, keyUp: 'X', Shift: 'shift', caps: 'capslock',
   },
   45: {
-    keyDown: 'c', code: 'KeyC', line: 3, keyUp: 'C',
+    keyDown: 'c', code: 'KeyC', line: 3, keyUp: 'C', Shift: 'shift', caps: 'capslock',
   },
   46: {
-    keyDown: 'v', code: 'KeyV', line: 3, keyUp: 'V',
+    keyDown: 'v', code: 'KeyV', line: 3, keyUp: 'V', Shift: 'shift', caps: 'capslock',
   },
   47: {
-    keyDown: 'b', code: 'KeyB', line: 3, keyUp: 'B',
+    keyDown: 'b', code: 'KeyB', line: 3, keyUp: 'B', Shift: 'shift', caps: 'capslock',
   },
   48: {
-    keyDown: 'n', code: 'KeyN', line: 3, keyUp: 'N',
+    keyDown: 'n', code: 'KeyN', line: 3, keyUp: 'N', Shift: 'shift', caps: 'capslock',
   },
   49: {
-    keyDown: 'm', code: 'KeyM', line: 3, keyUp: 'M',
+    keyDown: 'm', code: 'KeyM', line: 3, keyUp: 'M', Shift: 'shift', caps: 'capslock',
   },
   50: {
-    keyDown: ',', code: 'Comma', line: 3, keyUp: '<',
+    keyDown: ',', code: 'Comma', line: 3, keyUp: '<', Shift: 'shift', caps: 'nocapslock',
   },
   51: {
-    keyDown: '.', code: 'Period', line: 3, keyUp: '>',
+    keyDown: '.', code: 'Period', line: 3, keyUp: '>', Shift: 'shift', caps: 'nocapslock',
   },
   52: {
-    keyDown: '/', code: 'Slash', line: 3, keyUp: '?',
+    keyDown: '/', code: 'Slash', line: 3, keyUp: '?', Shift: 'shift', caps: 'nocapslock',
   },
-  53: { keyDown: '&#x25B2', code: 'ArrowUp', line: 3 },
-  54: { keyDown: 'Shift', code: 'ShiftRight', line: 3 },
-  55: { keyDown: 'Ctrl', code: 'ControlLeft', line: 4 },
-  56: { keyDown: 'Win', code: 'MetaLeft', line: 4 },
-  57: { keyDown: 'Alt', code: 'AltLeft', line: 4 },
-  58: { keyDown: ' ', code: 'Space', line: 4 },
-  59: { keyDown: 'Alt', code: 'AltRight', line: 4 },
-  60: { keyDown: '&#x25C4', code: 'ArrowLeft', line: 4 },
-  61: { keyDown: '&#x25BC', code: 'ArrowDown', line: 4 },
-  62: { keyDown: '&#x25BA', code: 'ArrowRight', line: 4 },
-  63: { keyDown: 'Ctrl', code: 'ControlRight', line: 4 },
+  53: {
+    keyDown: '&#x25B2', code: 'ArrowUp', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
+  54: {
+    keyDown: 'Shift', code: 'ShiftRight', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
+  55: {
+    keyDown: 'Ctrl', code: 'ControlLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  56: {
+    keyDown: 'Win', code: 'MetaLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  57: {
+    keyDown: 'Alt', code: 'AltLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  58: {
+    keyDown: ' ', code: 'Space', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  59: {
+    keyDown: 'Alt', code: 'AltRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  60: {
+    keyDown: '&#x25C4', code: 'ArrowLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  61: {
+    keyDown: '&#x25BC', code: 'ArrowDown', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  62: {
+    keyDown: '&#x25BA', code: 'ArrowRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  63: {
+    keyDown: 'Ctrl', code: 'ControlRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
   length: 64,
 };
 
 const ru = {
   0: {
-    lng: 'ru', keyDown: 'ё', code: 'Backquote', codeRu: 'Key', line: 0, keyUp: 'Ё',
+    lng: 'ru', keyDown: 'ё', code: 'Backquote', codeRu: true, line: 0, keyUp: 'Ё', Shift: 'shift', caps: 'capslock',
   },
   1: {
-    keyDown: '1', code: 'Digit1', line: 0, keyUp: '!',
+    keyDown: '1', code: 'Digit1', line: 0, keyUp: '!', Shift: 'shift', caps: 'nocapslock',
   },
   2: {
-    keyDown: '2', code: 'Digit2', line: 0, keyUp: '"',
+    keyDown: '2', code: 'Digit2', line: 0, keyUp: '"', Shift: 'shift', caps: 'nocapslock',
   },
   3: {
-    keyDown: '3', code: 'Digit3', line: 0, keyUp: '№',
+    keyDown: '3', code: 'Digit3', line: 0, keyUp: '№', Shift: 'shift', caps: 'nocapslock',
   },
   4: {
-    keyDown: '4', code: 'Digit4', line: 0, keyUp: ';',
+    keyDown: '4', code: 'Digit4', line: 0, keyUp: ';', Shift: 'shift', caps: 'nocapslock',
   },
   5: {
-    keyDown: '5', code: 'Digit5', line: 0, keyUp: '%',
+    keyDown: '5', code: 'Digit5', line: 0, keyUp: '%', Shift: 'shift', caps: 'nocapslock',
   },
   6: {
-    keyDown: '6', code: 'Digit6', line: 0, keyUp: ':',
+    keyDown: '6', code: 'Digit6', line: 0, keyUp: ':', Shift: 'shift', caps: 'nocapslock',
   },
   7: {
-    keyDown: '7', code: 'Digit7', line: 0, keyUp: '?',
+    keyDown: '7', code: 'Digit7', line: 0, keyUp: '?', Shift: 'shift', caps: 'nocapslock',
   },
   8: {
-    keyDown: '8', code: 'Digit8', line: 0, keyUp: '*',
+    keyDown: '8', code: 'Digit8', line: 0, keyUp: '*', Shift: 'shift', caps: 'nocapslock',
   },
   9: {
-    keyDown: '9', code: 'Digit9', line: 0, keyUp: '(',
+    keyDown: '9', code: 'Digit9', line: 0, keyUp: '(', Shift: 'shift', caps: 'nocapslock',
   },
   10: {
-    keyDown: '0', code: 'Digit0', line: 0, keyUp: ')',
+    keyDown: '0', code: 'Digit0', line: 0, keyUp: ')', Shift: 'shift', caps: 'nocapslock',
   },
   11: {
-    keyDown: '-', code: 'Minus', line: 0, keyUp: '_',
+    keyDown: '-', code: 'Minus', line: 0, keyUp: '_', Shift: 'shift', caps: 'nocapslock',
   },
   12: {
-    keyDown: '=', code: 'Equal', line: 0, keyUp: '+',
+    keyDown: '=', code: 'Equal', line: 0, keyUp: '+', Shift: 'shift', caps: 'nocapslock',
   },
-  13: { keyDown: 'Backspace', code: 'Backspace', line: 0 },
-  14: { keyDown: 'Tab', code: 'Tab', line: 1 },
+  13: {
+    keyDown: 'Backspace', code: 'Backspace', line: 0, Shift: 'noshift', caps: 'nocapslock',
+  },
+  14: {
+    keyDown: 'Tab', code: 'Tab', line: 1, Shift: 'noshift', caps: 'nocapslock',
+  },
   15: {
-    keyDown: 'й', code: 'KeyQ', line: 1, keyUp: 'Й',
+    keyDown: 'й', code: 'KeyQ', line: 1, keyUp: 'Й', Shift: 'shift', caps: 'capslock',
   },
   16: {
-    keyDown: 'ц', code: 'KeyW', line: 1, keyUp: 'Ц',
+    keyDown: 'ц', code: 'KeyW', line: 1, keyUp: 'Ц', Shift: 'shift', caps: 'capslock',
   },
   17: {
-    keyDown: 'у', code: 'KeyE', line: 1, keyUp: 'У',
+    keyDown: 'у', code: 'KeyE', line: 1, keyUp: 'У', Shift: 'shift', caps: 'capslock',
   },
   18: {
-    keyDown: 'к', code: 'KeyR', line: 1, keyUp: 'К',
+    keyDown: 'к', code: 'KeyR', line: 1, keyUp: 'К', Shift: 'shift', caps: 'capslock',
   },
   19: {
-    keyDown: 'е', code: 'KeyT', line: 1, keyUp: 'Е',
+    keyDown: 'е', code: 'KeyT', line: 1, keyUp: 'Е', Shift: 'shift', caps: 'capslock',
   },
   20: {
-    keyDown: 'н', code: 'KeyY', line: 1, keyUp: 'Н',
+    keyDown: 'н', code: 'KeyY', line: 1, keyUp: 'Н', Shift: 'shift', caps: 'capslock',
   },
   21: {
-    keyDown: 'г', code: 'KeyU', line: 1, keyUp: 'Г',
+    keyDown: 'г', code: 'KeyU', line: 1, keyUp: 'Г', Shift: 'shift', caps: 'capslock',
   },
   22: {
-    keyDown: 'ш', code: 'KeyI', line: 1, keyUp: 'Ш',
+    keyDown: 'ш', code: 'KeyI', line: 1, keyUp: 'Ш', Shift: 'shift', caps: 'capslock',
   },
   23: {
-    keyDown: 'щ', code: 'KeyO', line: 1, keyUp: 'Щ',
+    keyDown: 'щ', code: 'KeyO', line: 1, keyUp: 'Щ', Shift: 'shift', caps: 'capslock',
   },
   24: {
-    keyDown: 'з', code: 'KeyP', line: 1, keyUp: 'З',
+    keyDown: 'з', code: 'KeyP', line: 1, keyUp: 'З', Shift: 'shift', caps: 'capslock',
   },
   25: {
-    keyDown: 'х', code: 'BracketLeft', codeRu: 'Key', line: 1, keyUp: 'Х',
+    keyDown: 'х', code: 'BracketLeft', codeRu: true, line: 1, keyUp: 'Х', Shift: 'shift', caps: 'capslock',
   },
   26: {
-    keyDown: 'ъ', code: 'BracketRight', codeRu: 'Key', line: 1, keyUp: 'Ъ',
+    keyDown: 'ъ', code: 'BracketRight', codeRu: true, line: 1, keyUp: 'Ъ', Shift: 'shift', caps: 'capslock',
   },
   27: {
-    keyDown: '\\', code: 'Backslash', line: 1, keyUp: '/',
+    keyDown: '\\', code: 'Backslash', line: 1, keyUp: '/', Shift: 'shift', caps: 'nocapslock',
   },
-  28: { keyDown: 'Del', code: 'Delete', line: 1 },
-  29: { keyDown: 'CapsLock', code: 'CapsLock', line: 2 },
+  28: {
+    keyDown: 'Del', code: 'Delete', line: 1, Shift: 'noshift', caps: 'nocapslock',
+  },
+  29: {
+    keyDown: 'CapsLock', code: 'CapsLock', line: 2, Shift: 'noshift', caps: 'nocapslock',
+  },
   30: {
-    keyDown: 'ф', code: 'KeyA', line: 2, keyUp: 'Ф',
+    keyDown: 'ф', code: 'KeyA', line: 2, keyUp: 'Ф', Shift: 'shift', caps: 'capslock',
   },
   31: {
-    keyDown: 'ы', code: 'KeyS', line: 2, keyUp: 'Ы',
+    keyDown: 'ы', code: 'KeyS', line: 2, keyUp: 'Ы', Shift: 'shift', caps: 'capslock',
   },
   32: {
-    keyDown: 'в', code: 'KeyD', line: 2, keyUp: 'В',
+    keyDown: 'в', code: 'KeyD', line: 2, keyUp: 'В', Shift: 'shift', caps: 'capslock',
   },
   33: {
-    keyDown: 'а', code: 'KeyF', line: 2, keyUp: 'А',
+    keyDown: 'а', code: 'KeyF', line: 2, keyUp: 'А', Shift: 'shift', caps: 'capslock',
   },
   34: {
-    keyDown: 'п', code: 'KeyG', line: 2, keyUp: 'П',
+    keyDown: 'п', code: 'KeyG', line: 2, keyUp: 'П', Shift: 'shift', caps: 'capslock',
   },
   35: {
-    keyDown: 'р', code: 'KeyH', line: 2, keyUp: 'Р',
+    keyDown: 'р', code: 'KeyH', line: 2, keyUp: 'Р', Shift: 'shift', caps: 'capslock',
   },
   36: {
-    keyDown: 'о', code: 'KeyJ', line: 2, keyUp: 'О',
+    keyDown: 'о', code: 'KeyJ', line: 2, keyUp: 'О', Shift: 'shift', caps: 'capslock',
   },
   37: {
-    keyDown: 'л', code: 'KeyK', line: 2, keyUp: 'Л',
+    keyDown: 'л', code: 'KeyK', line: 2, keyUp: 'Л', Shift: 'shift', caps: 'capslock',
   },
   38: {
-    keyDown: 'д', code: 'KeyL', line: 2, keyUp: 'Д',
+    keyDown: 'д', code: 'KeyL', line: 2, keyUp: 'Д', Shift: 'shift', caps: 'capslock',
   },
   39: {
-    keyDown: 'ж', code: 'Semicolon', codeRu: 'Key', line: 2, keyUp: 'Ж',
+    keyDown: 'ж', code: 'Semicolon', codeRu: true, line: 2, keyUp: 'Ж', Shift: 'shift', caps: 'capslock',
   },
   40: {
-    keyDown: 'э', code: 'Quote', codeRu: 'Key', line: 2, keyUp: 'Э',
+    keyDown: 'э', code: 'Quote', codeRu: true, line: 2, keyUp: 'Э', Shift: 'shift', caps: 'capslock',
   },
-  41: { keyDown: 'Enter', code: 'Enter', line: 2 },
-  42: { keyDown: 'Shift', code: 'ShiftLeft', line: 3 },
+  41: {
+    keyDown: 'Enter', code: 'Enter', line: 2, Shift: 'noshift', caps: 'nocapslock',
+  },
+  42: {
+    keyDown: 'Shift', code: 'ShiftLeft', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
   43: {
-    keyDown: 'я', code: 'KeyZ', line: 3, keyUp: 'Я',
+    keyDown: 'я', code: 'KeyZ', line: 3, keyUp: 'Я', Shift: 'shift', caps: 'capslock',
   },
   44: {
-    keyDown: 'ч', code: 'KeyX', line: 3, keyUp: 'Ч',
+    keyDown: 'ч', code: 'KeyX', line: 3, keyUp: 'Ч', Shift: 'shift', caps: 'capslock',
   },
   45: {
-    keyDown: 'с', code: 'KeyC', line: 3, keyUp: 'С',
+    keyDown: 'с', code: 'KeyC', line: 3, keyUp: 'С', Shift: 'shift', caps: 'capslock',
   },
   46: {
-    keyDown: 'м', code: 'KeyV', line: 3, keyUp: 'М',
+    keyDown: 'м', code: 'KeyV', line: 3, keyUp: 'М', Shift: 'shift', caps: 'capslock',
   },
   47: {
-    keyDown: 'и', code: 'KeyB', line: 3, keyUp: 'И',
+    keyDown: 'и', code: 'KeyB', line: 3, keyUp: 'И', Shift: 'shift', caps: 'capslock',
   },
   48: {
-    keyDown: 'т', code: 'KeyN', line: 3, keyUp: 'Т',
+    keyDown: 'т', code: 'KeyN', line: 3, keyUp: 'Т', Shift: 'shift', caps: 'capslock',
   },
   49: {
-    keyDown: 'ь', code: 'KeyM', line: 3, keyUp: 'Ь',
+    keyDown: 'ь', code: 'KeyM', line: 3, keyUp: 'Ь', Shift: 'shift', caps: 'capslock',
   },
   50: {
-    keyDown: 'б', code: 'Comma', codeRu: 'Key', line: 3, keyUp: 'Б',
+    keyDown: 'б', code: 'Comma', codeRu: true, line: 3, keyUp: 'Б', Shift: 'shift', caps: 'capslock',
   },
   51: {
-    keyDown: 'ю', code: 'Period', codeRu: 'Key', line: 3, keyUp: 'Ю',
+    keyDown: 'ю', code: 'Period', codeRu: true, line: 3, keyUp: 'Ю', Shift: 'shift', caps: 'capslock',
   },
   52: {
-    keyDown: '.', code: 'Slash', line: 3, keyUp: ',',
+    keyDown: '.', code: 'Slash', line: 3, keyUp: ',', Shift: 'shift', caps: 'nocapslock',
   },
-  53: { keyDown: '&#x25B2', code: 'ArrowUp', line: 3 },
-  54: { keyDown: 'Shift', code: 'ShiftRight', line: 3 },
-  55: { keyDown: 'Ctrl', code: 'ControlLeft', line: 4 },
-  56: { keyDown: 'Win', code: 'MetaLeft', line: 4 },
-  57: { keyDown: 'Alt', code: 'AltLeft', line: 4 },
-  58: { keyDown: ' ', code: 'Space', line: 4 },
-  59: { keyDown: 'Alt', code: 'AltRight', line: 4 },
-  60: { keyDown: '&#x25C4', code: 'ArrowLeft', line: 4 },
-  61: { keyDown: '&#x25BC', code: 'ArrowDown', line: 4 },
-  62: { keyDown: '&#x25BA', code: 'ArrowRight', line: 4 },
-  63: { keyDown: 'Ctrl', code: 'ControlRight', line: 4 },
+  53: {
+    keyDown: '&#x25B2', code: 'ArrowUp', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
+  54: {
+    keyDown: 'Shift', code: 'ShiftRight', line: 3, Shift: 'noshift', caps: 'nocapslock',
+  },
+  55: {
+    keyDown: 'Ctrl', code: 'ControlLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  56: {
+    keyDown: 'Win', code: 'MetaLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  57: {
+    keyDown: 'Alt', code: 'AltLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  58: {
+    keyDown: ' ', code: 'Space', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  59: {
+    keyDown: 'Alt', code: 'AltRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  60: {
+    keyDown: '&#x25C4', code: 'ArrowLeft', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  61: {
+    keyDown: '&#x25BC', code: 'ArrowDown', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  62: {
+    keyDown: '&#x25BA', code: 'ArrowRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
+  63: {
+    keyDown: 'Ctrl', code: 'ControlRight', line: 4, Shift: 'noshift', caps: 'nocapslock',
+  },
   length: 64,
 };
 
 let capsLockStatus = false;
+let shift = false;
 class InitPage {
   createWrapper() {
     this.wrapper = document.createElement('div');
@@ -389,9 +458,8 @@ function bildKeyboard(lang) {
         const key = document.createElement('div');
         key.classList.add('key');
         key.classList.add(lang[y].code);
-        if (Object.prototype.hasOwnProperty.call(lang[y], 'codeRu')) {
-          key.classList.add(lang[y].codeRu);
-        }
+        key.classList.add(lang[y].Shift);
+        key.classList.add(lang[y].caps);
         line.append(key);
 
         const langCase = document.createElement('span');
@@ -458,23 +526,25 @@ class ControlKeyboard {
     this.start = textArea.selectionStart;
     this.value = textArea.value;
 
-    if (this.event.code === 'Tab') {
-      this.tab();
-    }
     if (this.event.type === 'keydown') {
-      if (this.event.key === 'Alt') {
+      if (this.event.key === 'Alt' || this.event.key === 'AltGraph') {
         event.preventDefault();
+      } else if (this.event.code === 'CapsLock') {
+        this.capsLock();
+      } else if (this.event.code === 'Tab') {
+        this.tab();
+      } else if (this.event.key === 'Shift') {
+        this.keyUp();
       }
       this.outKey();
       this.pressKey();
-      this.keyUp();
-
-      if (this.event.code === 'CapsLock') {
-        this.capsLock();
-      }
     } else {
+      if (this.event.key === 'Shift') {
+        this.keyUpHidden();
+      } else if (document.querySelector('.CapsLock').classList.contains('active-caps') && ((this.event.code === 'ShiftRight' || this.event.code === 'ShiftLeft'))) {
+        this.keyUp();
+      }
       this.unpressedKey();
-      this.keyUpHidden();
     }
     setTimeout(() => {
       this.changeLanguage();
@@ -487,18 +557,26 @@ class ControlKeyboard {
   }
 
   outKey() {
-    if (!(this.event.code.includes('Key'))) return;
-
+    if (this.event.code === 'F12' || this.event.code === 'Escape') return;
+    this.element = document.querySelector(`.${this.event.code}`);
+    if (!(this.element.classList.contains('shift'))) return;
     this.event.preventDefault();
-    const element = document.querySelector(`.${this.event.code}`);
 
-    if (document.querySelector('.CapsLock').classList.contains('active-caps') || this.event.shiftKey === true) {
-      textArea.value = `${this.value.substring(0, this.start)}${element.firstElementChild.lastElementChild.textContent}${this.value.substring(this.start, this.value.lenght)}`;
-      textArea.selectionEnd = this.start + 1;
+    if ((document.querySelector('.CapsLock').classList.contains('active-caps') && this.element.classList.contains('capslock')) || this.event.shiftKey === true || shift === true) {
+      this.upperCase();
     } else {
-      textArea.value = `${this.value.substring(0, this.start)}${element.firstElementChild.firstElementChild.textContent}${this.value.substring(this.start, this.value.lenght)}`;
-      textArea.selectionEnd = this.start + 1;
+      this.lowerCase();
     }
+  }
+
+  upperCase() {
+    textArea.value = `${this.value.substring(0, this.start)}${this.element.firstElementChild.lastElementChild.textContent}${this.value.substring(this.start, this.value.lenght)}`;
+    textArea.selectionEnd = this.start + 1;
+  }
+
+  lowerCase() {
+    textArea.value = `${this.value.substring(0, this.start)}${this.element.firstElementChild.firstElementChild.textContent}${this.value.substring(this.start, this.value.lenght)}`;
+    textArea.selectionEnd = this.start + 1;
   }
 
   pressKey() {
@@ -518,24 +596,20 @@ class ControlKeyboard {
     this.letterUp = document.querySelectorAll('.letterUp');
     this.letterDown = document.querySelectorAll('.letterDown');
 
-    if (this.event.code === 'ShiftRight' || this.event.code === 'ShiftLeft') {
-      this.letterUp.forEach((letter) => {
-        const k = letter;
-        k.hidden = false;
-      });
+    this.letterUp.forEach((letter) => {
+      const k = letter;
+      k.hidden = false;
+    });
 
-      this.letterDown.forEach((letter) => {
-        if (!letter.dataset.swith) {
-          const k = letter;
-          k.hidden = true;
-        }
-      });
-    }
+    this.letterDown.forEach((letter) => {
+      if (!letter.dataset.swith) {
+        const k = letter;
+        k.hidden = true;
+      }
+    });
   }
 
   keyUpHidden() {
-    if (this.event.key !== 'Shift') return;
-
     this.letterUp.forEach((letter) => {
       const k = letter;
       k.hidden = true;
@@ -617,26 +691,35 @@ class MouseControl {
     this.event = event;
     this.start = textArea.selectionStart;
     this.value = textArea.value;
-
     this.keyPress = event.target.closest('.key');
-    this.mouseInput(this.event);
-    this.pressKey();
-    setTimeout(() => {
-      this.unpressedKey();
-    }, 100);
-
-    if (event.target.closest('.CapsLock')) {
-      controlKeyboard.capsLock();
-    } else if (event.target.closest('.Backspace')) {
-      this.backspace();
-    } else if (event.target.closest('.Tab')) {
-      this.tab();
-    } else if (event.target.closest('.Delete')) {
-      this.del();
-    } else if (event.target.closest('.Enter')) {
-      this.enter();
-    } else if (event.target.closest('.Space')) {
-      this.space();
+    if (event.type === 'click') {
+      if (event.target.closest('.CapsLock')) {
+        controlKeyboard.capsLock();
+      } else if (event.target.closest('.Backspace')) {
+        this.backspace();
+      } else if (event.target.closest('.Tab')) {
+        this.tab();
+      } else if (event.target.closest('.Delete')) {
+        this.del();
+      } else if (event.target.closest('.Enter')) {
+        this.enter();
+      } else if (event.target.closest('.Space')) {
+        this.space();
+      }
+      this.mouseInput();
+      this.pressKey();
+      setTimeout(() => {
+        this.unpressedKey();
+      }, 100);
+    }
+    if (event.type === 'mousedown' && (this.event.target.closest('.ShiftRight') || this.event.target.closest('.ShiftLeft'))) {
+      shift = true;
+      controlKeyboard.keyUp();
+    } else if (event.type === 'mouseup' && (this.event.target.closest('.ShiftRight') || this.event.target.closest('.ShiftLeft'))) {
+      shift = false;
+      controlKeyboard.keyUpHidden();
+    } else if (event.type === 'click' && this.event.target.closest('.Shift')) {
+      controlKeyboard.outKey();
     }
   }
 
@@ -693,4 +776,7 @@ class MouseControl {
 
 const mouseControl = new MouseControl();
 
+document.addEventListener('click', mouseControl);
+document.addEventListener('mousedown', mouseControl);
+document.addEventListener('mouseup', mouseControl);
 document.addEventListener('click', mouseControl);
