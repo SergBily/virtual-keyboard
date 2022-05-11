@@ -532,6 +532,7 @@ class ControlKeyboard {
       } else if (this.event.code === 'CapsLock') {
         this.capsLock();
       } else if (this.event.code === 'Tab') {
+        event.preventDefault();
         this.tab();
       } else if (this.event.key === 'Shift') {
         this.keyUp();
